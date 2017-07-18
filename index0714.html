@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>20170714練習</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--   相對路徑-->
+    <img src="img/image1.jpg" alt="Landscape " width="250">
+
+    <!--    絕對路徑-->
+    <img src="https://i.ytimg.com/vi/mm_M7TE2qJ0/maxresdefault.jpg" alt="Landscape " width="250">
+
+    <!--    文字的連結-->
+    <a href="https://www.google.com.tw" target="_blank">連到google</a>
+
+    <!--    圖片的連結-->
+    <a href="https://www.google.com.tw" target="_blank">
+        <img src="https://i.ytimg.com/vi/mm_M7TE2qJ0/maxresdefault.jpg" alt="google " width="250">
+    </a>
+
+    <!--    線上圖庫網站unsplash unsplash-->
+    <!--    http://unsplash.it/ 操作-->
+    <img src="https://unsplash.it/800/200">
+
+    <img src="https://unsplash.it/800/200">
+
+    <!--    .newsDiv>h3.news-titles{標題}+p{新聞內容}   案tab 會變成下列格式-->
+    <div class="newsDiv">
+        <h3 class="news-titles">標題</h3>
+        <p>新聞內容</p>
+    </div>
+
+    <p>Hello <span class="user-name">John</span></p>
+
+    <h1 class="solution-price"><span class="original-price">159.9</span><span class="discount-price"><s>99.9</s></span><sup>$</sup></h1>
+    <strong>粗體字</strong>
+    <small>小字</small>
+
+
+    <!--    ol>li{有序清單項目$}*5  案tab出現下列-->
+    <ol>
+        <li>有序清單項目1</li>
+        <li>有序清單項目2</li>
+        <li>有序清單項目3</li>
+        <li>有序清單項目4</li>
+        <li>有序清單項目5</li>
+    </ol>
+
+    <!--    ul>li{無序清單項目$}*5 按tab會出現下列   type要自訂 type可不加-->
+    <ul type="circle">
+        <li>無序清單項目1</li>
+        <li>無序清單項目2</li>
+        <li>無序清單項目3</li>
+        <li>無序清單項目4</li>
+        <li>無序清單項目5</li>
+    </ul>
+
+
+    <!--
+    使用emmet輸入表格 table>tr*幾列>td*幾格>{內容$}    跑出下列
+-->
+    <table>
+        <tr>
+            <td>內容1</td>
+            <td>內容2</td>
+            <td>內容3</td>
+            <td>內容4</td>
+        </tr>
+        <tr>
+            <td>內容1</td>
+            <td>內容2</td>
+            <td>內容3</td>
+            <td>內容4</td>
+        </tr>
+        <tr>
+            <td>內容1</td>
+            <td>內容2</td>
+            <td>內容3</td>
+            <td>內容4</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- table>(tr>td{內容}*4)*3 -->
+    <table>
+        <tr>
+            <td>內容1</td>
+            <td>內容2</td>
+            <td>內容3</td>
+            <td>內容4</td>
+        </tr>
+        <tr>
+            <td>內容1</td>
+            <td>內容2</td>
+            <td>內容3</td>
+            <td>內容4</td>
+        </tr>
+        <tr>
+            <td>內容1</td>
+            <td>內容2</td>
+            <td>內容3</td>
+            <td>內容4</td>
+        </tr>
+    </table>
+
+    <hr>
+
+
+    <!--    table>(thead>tr>th*3)+(tbody>tr*2>td*3)+(tfoot>tr>(th+td))  可產生下列框架(內容文字自己打)-->
+    <table>
+        <thead>
+            <tr>
+                <th>品名</th>
+                <th>數量</th>
+                <th>價錢</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="1">產品A</td>
+                <td>1</td>
+                <td class="price">70</td>
+            </tr>
+            <tr>
+                <td>產品B</td>
+                <td>1</td>
+                <td class="price">80</td>
+            </tr>
+
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>合計</th>
+                <td class="price" colspan="2">150</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <hr>
+
+    <table class="囚犯困境">
+        <tr>
+            <td rowspan="2" colspan="2">監獄兔<br>困犯兩難</br>
+            </td>
+            <td colspan="2">機連列克</td>
+        </tr>
+        <tr>
+            <td>招</td>
+            <td>不招</td>
+        </tr>
+        <tr>
+            <td rowspan="2">普亭</td>
+            <td>招</td>
+            <td>都關十年</td>
+            <td>死刑,關二十年</td>
+        </tr>
+        <tr>
+            <td>不招</td>
+            <td>關二十年,死刑</td>
+            <td>無罪示範</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <form action="">
+        <!--    標籤   -->
+        <label for="">帳號</label>
+        <!--   placeholder是提示文字,   readonly 代表只能讀不能改         -->
+        <input type="text" placeholder="寫你的帳號呀,笨蛋" readonly required>
+
+        <br>
+
+        <!--        以下兩行可以這麼設定     label{密碼}+input[type="password" value="test"] -->
+        <label for="">密碼</label>
+        <!--    value是預設值設定(其實就是直接設定值了)   type 是輸入的型態   -->
+        <input type="password" value="test">
+        <br>
+
+        <label for="">選日期</label>
+        <input type="date">
+        <br>
+
+        <label for="">EMAIL</label>
+        <input type="email">
+        <br>
+
+        <label for="">寫數字</label>
+        <input type="number">
+        <br>
+        <label for="">選顏色</label>
+        <input type="color">
+        <br>
+        <label for="">選檔案 </label>
+        <input type="file"><br>
+
+        <label for="">單選題</label>
+        <input name="question1" type="radio" value="A">A
+        <input name="question1" type="radio" value="B">B
+        <input name="question1" type="radio" value="C">C
+        <br>
+
+        <label for="">複選題</label>
+        <input type="checkbox" name="question2" value="A">A
+        <input type="checkbox" name="question2" value="B">B
+        <input type="checkbox" name="question2" value="C">C
+        <br>
+
+        <label for="">多選一</label>
+        <select name="" id="">
+            <option value="A" selected>A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+        <br>
+
+        <input type="submit" value="送出表單">
+    </form>
+
+
+
+
+</body>
+
+</html>

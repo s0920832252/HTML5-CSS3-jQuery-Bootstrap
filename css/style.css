@@ -1,0 +1,35 @@
+.important {
+    /*  選取顏色後, 按下ctrl+e 可叫出調色器  */
+    color: #3b57a0;
+}
+
+#title01 {
+    color: red;
+}
+
+#title02 {
+    color: blue;
+}
+
+table,
+td {
+    /*1px 寬的  實體線   顏色是黑色*/
+    border: 1px solid black;
+    /* 設定框模型 */
+    border-collapse: collapse;
+}
+
+th,
+td {
+    /*內容與邊線的距離,  距離上下8px   距離左右20px*/
+    padding: 8px 20px;
+}
+
+.price {
+    text-align: center;
+}
+
+.囚犯困境 {
+    text-align: center;
+    background: #86866b;
+}
