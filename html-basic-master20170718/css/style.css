@@ -1,0 +1,93 @@
+/* 可去google font 上 引用字體  Lobster 如下 */
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+* {
+    color: green;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+li {
+    font-family: '微軟正黑體';
+    color: #ff6a00;
+    text-align: center;
+    /*字元間距*/
+    letter-spacing: 5px;
+    /*字間距 - 英文*/
+    word-spacing: 20px;
+    /*航高  兩倍高*/
+    line-height: 2;
+    /*字形粗度 100-900*/
+    font-weight: 900;
+    /*normal: 正常的字型;  italic: 斜體的字型; */
+    font-style: italic;
+}
+
+h1 {
+    font-size: 70px;
+    /*text-shadow: x偏移量px y偏移量 模糊度 顏色;*/
+    text-shadow: 1px 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    /*超連結的裝飾線是否使用或者裝飾線的位置*/
+    text-decoration: none;
+}
+
+
+/*a被點後的狀態  /* 已連結過 */
+
+*/ a:visited {
+    color: blue;
+}
+
+
+/*滑鼠滑過*/
+
+a:hover {
+    color: black;
+    background-color: red;
+}
+
+
+/*點下的狀態*/
+
+a:active {
+    color: yellow;
+    background-color: blue;
+}
+
+.btn {
+    background-color: orange;
+    color: white;
+    /*在a這個行內元素內,  inline是沒有width和height的概念的, 只有區塊元素有*/
+    width: 120px;
+    height: 44px;
+    /* 把杭內元素改成區塊元素顯示-會換行 */
+    display: block;
+    /*改成區塊元素,不換行*/
+    display: inline-block;
+    text-align: center;
+    line-height: 44px;
+    /*有改變的話,   作用屬性   改變的時間  改變的加速度時間分配,ease類似邏輯取縣 */
+    transition: all 1s ease;
+}
+
+.btn:hover {
+    width: 200px;
+    /*邊角變圓形*/
+    border-radius: 5px;
+}
+
+.box {
+    width: 300px;
+    height: 200px;
+    border: 5px solid black;
+    background-color: royalblue;
+}
