@@ -2,12 +2,31 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    color: #333;
+    /*    border: 1px solid black;*/
 }
 
 html,
 body {
     margin: 0;
     padding: 0;
+    background-color: #29323b;
+}
+
+html {
+    position: relative;
+}
+
+html:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: #E2C0B9;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 
@@ -18,3 +37,73 @@ body {
 
 
 /* 字體顏色 #333 */
+
+.cv {
+    width: 700px;
+    margin: 100px auto;
+    background-color: white;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+    /*轉換文字 第一個字為大寫*/
+    text-transform: capitalize;
+}
+
+.cv-header,
+.cv-body,
+.cv-footer {
+    padding: 40px 60px;
+}
+
+.cv-footer {
+    background-color: #29323b;
+}
+
+.cv-header {
+    background-color: #eee;
+}
+
+.experience {
+    padding-bottom: 30px;
+    position: relative;
+    border-bottom: 1px dashed #555;
+}
+
+
+/*experience 的第三個小孩*/
+
+.experience:last-child {
+    border-bottom: none;
+}
+
+.experience>img {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 1s ease;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 22px;
+    border: 1px dashed #eee;
+}
+
+.social-link>i.fa {
+    color: white;
+}
+
+.social-link:hover {
+    background-color: rgba(221, 221, 221, 0.9);
+}
