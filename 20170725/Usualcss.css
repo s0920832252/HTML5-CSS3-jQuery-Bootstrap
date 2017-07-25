@@ -1,0 +1,79 @@
+/* 基礎設定 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2b82ad;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+div {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 600px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25)
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* 選擇器 */
+
+
+/* div p 選取div裡"全部"的p */
+
+
+/* div>p 選取div裡的p */
+
+
+/* div>article>p 選取div裡article裡的p */
+
+
+/* section + p 選取"緊接"在section後的p */
+
+
+/* h1 + p 選取"緊接"在h1後的p */
+
+
+/* p:first-child 選取身為第一個子元素的p */
+
+
+/* p:nth-child(2)選取身為第二個子元素的p */
+
+
+/* section:nth-child(2)選取身為第二個子元素的section */
+
+
+/* .headline ~ .published-time 選取.headline後的所有.published-time */
+
+
+/* p:nth-child(3n+2) */
+
+
+/* p:only-child */
+
+
+/* p:not(.published-time) */
+
+article :only-child {
+    background-color: yellow;
+}

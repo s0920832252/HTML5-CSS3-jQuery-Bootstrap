@@ -1,0 +1,74 @@
+/*類別item的article兒子的h1兒子*/
+
+
+/*
+.item>article>h1 {
+    background-color: red;
+}
+*/
+
+
+/*
+選擇所有緊接在h1後面的第一個p*/
+
+
+/*
+h1+p {
+    background-color: yellow;
+}
+*/
+
+
+/*
+element1~element2(CSS3) 選擇出現在 element1 後面的 element2 element1 和 element2 這兩個元素 必須具有相同的父元素 但 element2 不必緊跟在 element1 的後面/
+*/
+
+
+/*
+h1~p {
+    background-color: gray;
+}
+*/
+
+
+/*
+.element1.element2必須同時符合element1和element2的選擇條件
+*/
+
+
+/*
+.title.important {
+    background-color: green;
+}
+*/
+
+
+/*是第一個小孩的h1標籤*/
+
+
+/*
+h1:first-child {
+    background-color: chartreuse;
+}
+*/
+
+
+/*排除了類別名稱是title的 h1屬性*/
+
+h1:not(.title) {
+    background-color: chartreuse;
+}
+
+
+/*在目標對象之前加入文字區塊*/
+
+.price:before {
+    content: "$ ";
+}
+
+
+/*在目標對象之後加入文字區塊*/
+
+.price:after {
+    content: " NTD"
+}
