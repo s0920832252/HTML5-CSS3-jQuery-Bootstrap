@@ -3,7 +3,6 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     color: #333;
-    /*    border: 1px solid black;*/
 }
 
 html,
@@ -13,17 +12,11 @@ body {
     background-color: #29323b;
 }
 
-
-/*把html的位置設定為relative 讓別的元素可以以他為錨點去定位 預設是static,*/
-
 html {
     position: relative;
 }
 
-
-/*插入一個元素在html後 (可用來插入文字內容-但我們輸入空白,)*/
-
-html::after {
+html:after {
     content: "";
     display: block;
     width: 100%;
@@ -50,11 +43,10 @@ html::after {
     background-color: white;
     position: relative;
     z-index: 5;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
 }
 
 .section-title {
-    /*轉換文字 第一個字為大寫*/
     text-transform: capitalize;
 }
 
@@ -64,31 +56,27 @@ html::after {
     padding: 40px 60px;
 }
 
-.cv-footer {
-    background-color: #29323b;
-}
-
 .cv-header {
     background-color: #eee;
 }
 
+.cv-footer {
+    background-color: #29323b;
+}
+
 .experience {
-    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 15px;
     position: relative;
     border-bottom: 1px dashed #555;
 }
 
-
-/*是experience 且他是(最後一個小孩)第三個小孩*/
-
-.experience:nth-child(3) {
-    /*.experience:last-child {*/
+.experience:last-child {
     border-bottom: none;
 }
 
 .experience>img {
     width: 100px;
-    /*定位在他最近的外層元素*/
     position: absolute;
     top: 10px;
     right: 0;
@@ -99,19 +87,19 @@ html::after {
     height: 50px;
     display: inline-block;
     line-height: 50px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-    transition: all 1s ease;
-    border-radius: 5px;
-    text-align: center;
     font-size: 22px;
     border: 1px dashed #eee;
+    color: white;
+    background-color: rgba(0, 0, 0, .3);
+    transition: all .5s ease;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.social-link:hover {
+    background-color: rgba(0, 0, 0, .6);
 }
 
 .social-link>i.fa {
     color: white;
-}
-
-.social-link:hover {
-    background-color: rgba(221, 221, 221, 0.9);
 }
