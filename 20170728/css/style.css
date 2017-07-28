@@ -76,6 +76,14 @@ body {
     filter: brightness(1.2) grayscale(10%);
     /*對物件做旋轉*/
     transform: rotateX(25deg);
+    /*transform-origin: x-axis y-axis z-axis;
+    定义视图被置于 X 轴的何处。可能的值：
+left
+center
+right
+length
+%
+    */
     transform-origin: bottom;
     /**/
     /* todo 設定filter屬性控制照片明亮與飽和度 */

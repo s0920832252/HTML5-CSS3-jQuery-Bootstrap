@@ -1,0 +1,44 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    /*當資料超過框架時的呈現方式*/
+    overflow: scroll;
+}
+
+header {
+    width: 100%;
+    /*vh是螢幕的大小單位  100vh代表整個螢幕*/
+    height: 50vh;
+    background: #ccc;
+    text-align: center;
+    /*以下是文字垂直致中的作法*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    border: 3px solid red;
+    /*因為.col用了float的關係, 所以會浮起來到最上面, 因此需要用overflow去條回來*/
+    overflow: auto;
+}
+
+.col {
+    width: calc(100%/3);
+    height: 200px;
+    background-color: aqua;
+    /*排版由左邊排到右邊*/
+    float: left;
+    opacity: 0.5;
+}
+
+.col:nth-child(2n) {
+    background-color: orange;
+}
+
+footer {
+    width: 100%;
+    height: 600px;
+    background-color: royalblue;
+}
