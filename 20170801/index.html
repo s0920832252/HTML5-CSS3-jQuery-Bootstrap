@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HTML Basic</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">Logo</a>
+        </div>
+        <ul class="navbar-list">
+            <!-- (li>a{Link$})*4 -->
+            <li><a href="">Link1</a></li>
+            <li><a href="">Link2</a></li>
+            <li><a href="">Link3</a></li>
+            <li><a href="">Link4</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="header-img" src="https://unsplash.it/250/250?image=300" alt="">
+            </div>
+
+            <div class="col-md-6">
+                <h1>Header title</h1>
+                <h2>Header Description</h2>
+            </div>
+        </div>
+    </header>
+
+    <section id="introSection">
+        <div class="row">
+            <!-- col start -->
+            <div class="col-md-4">
+                <h3>標題1</h3>
+                <div class="icon">
+                    <i class="fa fa-5x fa-meetup" aria-hidden="true"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <!-- col end -->
+            <!-- col start -->
+            <div class="col-md-4">
+                <h3>標題2</h3>
+                <div class="icon">
+                    <i class="fa fa-5x fa-id-card" aria-hidden="true"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <!-- col end -->
+            <!-- col start -->
+            <div class="col-md-4">
+                <h3>標題3</h3>
+                <div class="icon">
+                    <i class="fa fa-5x fa-microchip" aria-hidden="true"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <!-- col end -->
+        </div>
+    </section>
+
+    <section class="row" id="imageSection">
+        <!--      以下的快捷產生  (.col-md-3#photoImg$>h4{photoImg$})*8-->
+        <div class="col-md-3" id="photoImg1">
+            <h4>photoImg1</h4>
+        </div>
+        <div class="col-md-3" id="photoImg2">
+            <h4>photoImg2</h4>
+        </div>
+        <div class="col-md-3" id="photoImg3">
+            <h4>photoImg3</h4>
+        </div>
+        <div class="col-md-3" id="photoImg4">
+            <h4>photoImg4</h4>
+        </div>
+        <div class="col-md-3" id="photoImg5">
+            <h4>photoImg5</h4>
+        </div>
+        <div class="col-md-3" id="photoImg6">
+            <h4>photoImg6</h4>
+        </div>
+        <div class="col-md-3" id="photoImg7">
+            <h4>photoImg7</h4>
+        </div>
+        <div class="col-md-3" id="photoImg8">
+            <h4>photoImg8</h4>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <h1>Footer</h1>
+    </footer>
+    <div class="chat-component">
+        <div class="chatroom">
+            <ul class="messages">
+                <li class="client">
+                    <span>Hi</span>
+                </li>
+                <li class="robot">
+                    <span>May i help you ?</span>
+                </li>
+
+            </ul>
+            <div class="chatroom-input-group">
+                <input type="text">
+            </div>
+        </div>
+        <button class="toggle-chatroom">
+<!--           在fa 後面加上  fa-3x  代表  把字體圖用到三倍大-->
+            <i class="fa fa-2x fa-commenting" aria-hidden="true"></i>
+        </button>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

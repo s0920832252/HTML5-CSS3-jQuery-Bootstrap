@@ -1,0 +1,305 @@
+.row {
+    /* overflow: auto; */
+}
+
+
+/*設定網格Grid的部分*/
+
+.row:after {
+    content: "";
+    /*清除在其左邊 帶有float屬性的特性   after標籤為inline元素因此要修改成block  clear才會作用*/
+    clear: both;
+    display: block;
+}
+
+.col-md-3 {
+    /*calc可以計算div的寬度*/
+    width: calc( 100% * 3 / 12);
+}
+
+.col-md-4 {
+    width: calc( 100% * 4 / 12);
+}
+
+.col-md-6 {
+    width: calc( 100% * 6 / 12);
+}
+
+
+/*選擇到所有col- 的類別*/
+
+[class^='col-'] {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/*general*/
+
+
+/*primary:oeange*/
+
+h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+    color: #333;
+}
+
+
+/*navbar*/
+
+body {
+    padding-top: 50px;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background: orange;
+    /*固定定位（position: fixed）的元素會相對於瀏覽器視窗來定位，這意味著即便頁面捲動，它還是會固定在相同的位置。和 relative 一樣，我們會使用 top 、 right 、 bottom 和 left 屬性來定位。*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 200;
+}
+
+.navbar-header {
+    float: left;
+}
+
+.navbar-list {
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand,
+.navbar-list>li {
+    /*以下兩個都可以把li元素弄成一行*/
+    float: left;
+    /*    display: inline;*/
+    /*設定高度*/
+    height: 50px;
+    /**/
+    /*把航高距設定跟容器高度一樣高  會造成垂直致中的效果*/
+    line-height: 50px;
+    margin: 0px 15px;
+}
+
+.navbar-brand,
+.navbar-list>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*header*/
+
+header {
+    background: #ccc;
+    /*padding: 50px 0   此行等同於下兩行*/
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.header-img {
+    /*建議圖片只設定高和寬其中一個就好  另外一個會等比例縮放*/
+    width: 220px;
+    /*設定圓角的角度寬度達到圖片一樣寬*/
+    border-radius: 50%;
+    /*img標籤是inline元素  因此margin不會作用  除非用display改變成block特性*/
+    margin: 0 auto;
+    display: block;
+}
+
+
+/*interSection*/
+
+#introSection {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.icon {
+    color: orange;
+}
+
+
+/*imageSection*/
+
+#imageSection {
+    width: 100%;
+    /*
+    height: 200px;
+    background: aqua;
+*/
+}
+
+[id^='photoImg'] {
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Filters主要是运用在图片上，以实现一些特效 grayscale是設定彩度*/
+    filter: grayscale(100%);
+}
+
+[id^='photoImg']>h4 {
+    color: white;
+    text-align: center;
+    line-height: 220px;
+    /*瀏覽器會給文字預設margin  因此要歸零  才好排版  跑到至中的位置*/
+    margin: 0;
+    font-size: 6px;
+    /*透明度調整成0 - 全透明*/
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+[id^='photoImg']:hover {
+    filter: grayscale(0%);
+}
+
+[id^=photoImg]:hover>h4 {
+    font-size: 24px;
+    opacity: 1;
+}
+
+#photoImg1 {
+    background-image: url('https://unsplash.it/220/220?image=991');
+}
+
+#photoImg2 {
+    background-image: url('https://unsplash.it/220/220?image=991');
+}
+
+#photoImg3 {
+    background-image: url('https://unsplash.it/220/220?image=991');
+}
+
+#photoImg4 {
+    background-image: url('https://unsplash.it/220/220?image=991');
+}
+
+#photoImg5 {
+    background-image: url('https://unsplash.it/220/220?image=991');
+}
+
+#photoImg6 {
+    background-image: url('https://unsplash.it/220/220?image=991');
+}
+
+#photoImg7 {
+    background-image: url('https://unsplash.it/220/220?image=991');
+}
+
+#photoImg8 {
+    background-image: url('https://unsplash.it/220/220?image=991');
+}
+
+
+/*footer*/
+
+footer {
+    background: orange;
+    padding: 80px;
+    text-align: center;
+}
+
+footer>h1 {
+    color: white;
+}
+
+
+/*char-component*/
+
+.chat-component {
+    /*用了fixed  該屬性就好像浮起來一樣*/
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    /*    position: relative;*/
+}
+
+.toggle-chatroom {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    background: white;
+    color: orange;
+    /*取消瀏覽器對於圖片的預設border設定*/
+    border-style: none;
+    /*position 預設定位為 static 這會使z-index設定失效*/
+    position: relative;
+    z-index: 200;
+}
+
+.chatroom {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background: aqua;
+    bottom: 50px;
+    right: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+    z-index: 180;
+    overflow: hidden;
+    /*預設藏起來, 點下去之後即才會跳出來*/
+    display: none;
+}
+
+.messages {
+    /*把ul的預設取消  方便後續定位之類的設定*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /**/
+    width: 100%;
+    height: 250px;
+}
+
+.messages>li {
+    padding: 12px;
+}
+
+.messages>li>span {
+    padding: 5px 10px;
+    background: white;
+}
+
+.messages>li:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.messages>li.client>span {
+    float: right;
+    background: orange;
+    color: white;
+}
+
+.chatroom-input-group {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.chatroom-input-group>input {
+    width: 100%;
+    height: 30px;
+    display: block;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+}

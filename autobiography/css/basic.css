@@ -1,0 +1,12 @@
+* {
+    /*計算大小的依據  以邊線為準*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
