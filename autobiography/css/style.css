@@ -131,3 +131,11 @@ section {
     position: relative;
 */
 }
+
+.pages>[id^='page'] {
+    display: none;
+}
+
+.pages>[id^='page'].active {
+    display: block;
+}

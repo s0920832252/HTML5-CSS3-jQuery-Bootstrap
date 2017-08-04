@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="img/icon.gif">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/normalize.min.css">
+    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
     <link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- note jQuery -->
@@ -20,12 +20,12 @@
 <body>
     <nav class="navbar">
         <ul class="navGroup">
-            <li class="navList1">個人資料</li>
-            <li class="navList2">求學經歷</li>
-            <li class="navList3">求職條件</li>
-            <li class="navList4">技能專長</li>
-            <li class="navList5">自傳附件</li>
-            <li class="navList6">推薦人</li>
+            <li class="navList" data-target="#page1">個人資料</li>
+            <li class="navList" data-target="#page2">求學經歷</li>
+            <li class="navList" data-target="#page3">求職條件</li>
+            <li class="navList" data-target="#page4">技能專長</li>
+            <li class="navList" data-target="#page5">自傳附件</li>
+            <li class="navList" data-target="#page6">推薦人</li>
         </ul>
     </nav>
     <div class="CV">
@@ -38,7 +38,17 @@
                 <div class="col-md-2" id="email">s0920832252s@gmail.com</div>
             </div>
         </header>
-        <section class="content">lorem1000</section>
+        <section class="pages">
+            <div class="page active" id="page1">
+                <h1>Page1</h1>
+
+            </div>
+            <div class="page" id="page2">Page2</div>
+            <div class="page" id="page3">Page3</div>
+            <div class="page" id="page4">Page4</div>
+            <div class="page" id="page5">Page5</div>
+            <div class="page" id="page6">Page6</div>
+        </section>
     </div>
 </body>
 
