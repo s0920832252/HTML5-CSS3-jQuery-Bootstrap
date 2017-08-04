@@ -1,0 +1,352 @@
+/* general */
+
+
+/* primary: orange */
+
+//Variables
+$primary: royalblue;
+// Mixins
+// 建立transition的mixin
+@mixin transition($arg) {
+    transition: $arg;
+    -moz-transition: $arg;
+    -webkit-transition: $arg;
+}
+
+@mixin box-shadow($arg) {
+    box-shadow: $arg;
+    -moz-box-shadow: $arg;
+    -webkit-box-shadow: $arg;
+}
+
+@mixin border-radius($arg) {
+    border-radius: $arg;
+    -moz-border-radius: $arg;
+    -webkit-border-radius: $arg;
+}
+
+//%代表 佔位選擇器(設定)  裝備的感覺
+%normalTransition {
+    @include transition(all 2s ease);
+}
+
+
+/* general */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+    color: #666;
+}
+
+
+/* navbar */
+
+body {
+    padding-top: 50px;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background: $primary;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 200;
+}
+
+.navbar-header {
+    float: left;
+}
+
+.navbar-list {
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+//.navbar-brand,
+//.navbar-list>li {
+//    float: left;
+//    height: 50px;
+//    line-height: 50px;
+//    margin: 0 15px;
+//}
+//
+//.navbar-brand,
+//.navbar-list>li>a {
+//    color: white;
+//    text-decoration: none;
+//}
+.navbar-brand,
+.navbar-list>li {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 15px;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* header */
+
+
+/* media query */
+
+
+/* screen > 600px */
+
+
+/* 至少要有601px */
+
+
+/* min-width: 601px */
+
+@media screen and ( min-width: 601px) {
+    .header-title {
+        color: red;
+    }
+}
+
+@media screen and ( max-width: 600px) {
+    .header-title {
+        color: blue;
+    }
+}
+
+header {
+    background: #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* padding: 50px 0 */
+    position: relative;
+}
+
+.header-img {
+    width: 220px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.search-bar {
+    width: 600px;
+    height: 50px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    padding: 0 20px;
+    /* 預設值 */
+    /*
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 200;
+    */
+    /*
+    position: relative;
+    */
+    position: absolute;
+    bottom: -25px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    /* absolute 水平垂直置中
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    */
+}
+
+.search-bar>input {
+    width: 100%;
+    height: 50px;
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+    &:focus {
+        outline: none;
+    }
+}
+
+
+/* introSection */
+
+#introSection {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.icon {
+    color: $primary;
+    &:hover {
+        /*lighten將輸入的顏色變淡15%*/
+        color: lighten($primary, 15%);
+    }
+}
+
+
+/* imageSection */
+
+#imageSection {
+    width: 100%;
+}
+
+
+/*使用@extend插入之先預先建立好的設定*/
+
+[id^='photoImg'] {
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    @extend %normalTransition;
+    h4 {
+        color: white;
+        text-align: center;
+        line-height: 220px;
+        margin: 0;
+        font-size: 6px;
+        opacity: 0;
+        @extend %normalTransition;
+    }
+    &:hover {
+        filter: grayscale(0%);
+        h4 {
+            font-size: 24px;
+            opacity: 1;
+        }
+    }
+}
+
+
+/*用sass使用迴圈   #代表插入變數  nth(陣列,第幾個)可以取出陣列的值  迴圈變數$i */
+
+$photoList:"302",
+"354",
+"542",
+"780",
+"876",
+"653",
+"871",
+"765";
+@for $i from 1 through length($photoList) {
+    #photoImg#{$i} {
+        background-image: url('https://unsplash.it/220/220?image=#{nth($photoList,$i)}');
+    }
+}
+
+
+/* footer */
+
+footer {
+    background: orange;
+    padding: 80px 0;
+    text-align: center;
+}
+
+footer>h1 {
+    color: white;
+}
+
+
+/* chat-component */
+
+.chat-component {
+    /* position: static; */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.toggle-chatroom {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+    background: white;
+    color: orange;
+    border-style: none;
+    position: relative;
+    z-index: 200;
+}
+
+.chatroom {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background: white;
+    bottom: 50px;
+    right: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+    z-index: 180;
+    display: none;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 250px;
+    background: #eee;
+}
+
+.messages>li {
+    padding: 12px;
+}
+
+.messages>li>span {
+    padding: 5px 10px;
+    background: white;
+}
+
+.messages>li:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.messages>li.client>span {
+    float: right;
+    background: orange;
+    color: white;
+}
+
+.chatroom-input-group {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.chatroom-input-group>input {
+    width: 100%;
+    height: 30px;
+    display: block;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+}

@@ -1,0 +1,58 @@
+/* Grid */
+
+
+/* row */
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/* col */
+
+[class^='col-'] {
+    width: 100%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+// 建立一個mixin(函數)
+
+/* sass可以用for loop */
+
+@mixin makeCol($device) {
+    // for loop
+    @for $i from 1 through 12 {
+        .col-#{$device}-#{$i} {
+            width: calc(100% * #{$i} / 12);
+        }
+    }
+}
+
+
+/*手機板的col*/
+
+@include makeCol('xs');
+
+/*平板的col*/
+
+@media screen and (min-width: 768px) {
+    @include makeCol('sm');
+}
+
+
+/*筆電的col*/
+
+@media screen and (min-width: 992px) {
+    @include makeCol('md');
+}
+
+
+/*桌電的col*/
+
+@media screen and (min-width: 1200px) {
+    @include makeCol('lg');
+}
