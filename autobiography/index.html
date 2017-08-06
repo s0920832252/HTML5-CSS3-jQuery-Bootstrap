@@ -7,8 +7,11 @@
     <link rel="shortcut icon" href="img/icon.gif">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
+
     <link rel="stylesheet" href="css/basic.css">
+    <!--    <link rel="stylesheet" href="css/normalize.min.css">-->
+    <link rel="stylesheet" href="css/grid.css">
+
     <link rel="stylesheet" href="css/style.css">
     <!-- note jQuery -->
     <script src="js/jquery/3.2.1/jquery.min.js"></script>
@@ -18,36 +21,67 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul class="navGroup">
-            <li class="navList" data-target="#page1">個人資料</li>
-            <li class="navList" data-target="#page2">求學經歷</li>
-            <li class="navList" data-target="#page3">求職條件</li>
-            <li class="navList" data-target="#page4">技能專長</li>
-            <li class="navList" data-target="#page5">自傳附件</li>
-            <li class="navList" data-target="#page6">推薦人</li>
-        </ul>
-    </nav>
-    <div class="CV">
+    <aside class="asidebar">
+        <nav class="navbar ">
+            <div class="col-List " data-target=" #page1">
+                <h3 class="asideTitle ">個人資料</h3>
+                <div class="icon ">
+                    <i class="fa fa-2x fa-address-book-o " aria-hidden="true "></i>
+                </div>
+            </div>
+            <div class="col-List " data-target="#page2">
+                <h3 class="asideTitle ">求學經歷</h3>
+                <div class="icon ">
+                    <i class="fa fa-2x fa-trophy " aria-hidden="true "></i>
+                </div>
+            </div>
+            <div class="col-List " data-target="#page3">
+                <h3 class="asideTitle ">求職條件</h3>
+                <div class="icon ">
+                    <i class="fa fa-2x fa-heart " aria-hidden="true "></i>
+                </div>
+            </div>
+            <div class="col-List " data-target="#page4">
+                <h3 class="asideTitle ">技能專長</h3>
+                <div class="icon ">
+                    <i class="fa fa-2x fa-bar-chart " aria-hidden="true "></i>
+                </div>
+            </div>
+            <div class="col-List " data-target="#page5">
+                <h3 class="asideTitle ">自傳附件</h3>
+                <div class="icon ">
+                    <i class="fa fa-2x fa-font " aria-hidden="true "></i>
+                </div>
+            </div>
+            <div class="col-List " data-target="#page6">
+                <h3 class="asideTitle ">推薦人</h3>
+                <div class="icon ">
+                    <i class="fa fa-2x fa-user-circle-o " aria-hidden="true "></i>
+                </div>
+            </div>
+
+        </nav>
+    </aside>
+    <div class="CV ">
         <header class="headers">
-            <img src="img/img.jpg" alt="" class="personImg">
+            <img class="personImg" src="img/personImg.jpg " alt=" " class="personImg">
             <div class="basicTextData">
-                <div class="col-md-2" id="name">陳世承</div>
-                <div class="col-md-2" id="telephone">0989782266</div>
-                <div class="col-md-2" id="EngName">city Chen</div>
-                <div class="col-md-2" id="email">s0920832252s@gmail.com</div>
+                <div class="col-md-8" id="name">陳世承</div>
+                <div class="col-md-8" id="telephone">0989782266</div>
+                <div class="col-md-8" id="EngName">city Chen</div>
+                <div class="col-md-8" id="email">s0920832252s@gmail.com</div>
             </div>
         </header>
+        <div class="phony">滑鼠移動到我的履歷看看</div>
         <section class="pages">
             <div class="page active" id="page1">
-                <h1>Page1</h1>
-
+                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus obcaecati quae explicabo itaque voluptate expedita ea, quibusdam doloribus sapiente, cupiditate facilis natus facere laboriosam architecto rem. Odio illum repellat sequi optio officia perferendis soluta, sit animi nulla reiciendis necessitatibus quidem magni ut dignissimos voluptatum et dicta placeat, vero natus numquam cumque corporis ex facilis similique. Esse neque officia minus reiciendis quas. Voluptate, quis. Aliquam hic quae repellendus cupiditate dignissimos unde velit, error est consequuntur aliquid voluptate delectus voluptatibus dolorem incidunt mollitia illum. Consectetur molestias numquam neque velit itaque cupiditate, provident, quas illo quod dolores odio repellendus quasi, esse deserunt quisquam!</h1>
             </div>
-            <div class="page" id="page2">Page2</div>
-            <div class="page" id="page3">Page3</div>
-            <div class="page" id="page4">Page4</div>
-            <div class="page" id="page5">Page5</div>
-            <div class="page" id="page6">Page6</div>
+            <div class="page " id="page2">Page2</div>
+            <div class="page " id="page3">Page3</div>
+            <div class="page " id="page4">Page4</div>
+            <div class="page " id="page5">Page5</div>
+            <div class="page " id="page6">Page6</div>
         </section>
     </div>
 </body>

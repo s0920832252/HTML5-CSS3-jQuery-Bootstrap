@@ -22,7 +22,10 @@ $(function () {
     });
     */
 
-    $('.navList').click(function () {
+    $('.col-List').click(function () {
+        /*修改點到的data-target元素的值為1223*/
+        //        var target = $(this).attr('data-target', 1223);
+
         var target = $(this).attr('data-target');
         console.log('現在的target是:' + target);
 
