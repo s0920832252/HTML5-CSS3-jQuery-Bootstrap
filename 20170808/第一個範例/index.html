@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- jumbotron1 -->
+    <header class="jumbotron">
+        <div class="container">
+            <h1>BS3 Jumbotron</h1>
+        </div>
+    </header>
+
+    <!-- jumbotron1 end -->
+    <!-- jumbotron2 -->
+    <!--
+    <div class="container">
+        <header class="jumbotron">
+            <h1>Jumbotron</h1>
+        </header>
+    </div>
+    -->
+    <!-- jumbotron2 end -->
+
+    <section>
+        <div class="container">
+            <h1>表格</h1>
+            <!-- 表格開始 -->
+            <!--            table-bordered讓table有邊線
+            table-hover 滑鼠游標移動上面的時候  會上色
+            table-striped  偶數行和基數行的顏色會不一樣
+            -->
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>欄位一<span class="glyphicon glyphicon-ok"></span></th>
+                        <th>欄位二<span class="glyphicon glyphicon-volume-off"></span></th>
+                        <th>欄位三</th>
+                        <th>欄位四</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                    </tr>
+                    <tr>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                    </tr>
+                    <tr>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 表格結尾 -->
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1>按鈕與輸入相關</h1>
+            <h3>按鈕</h3>
+            <a href="" class="btn btn-default">btn-default</a>
+            <a href="" class="btn btn-primary">btn-primary</a>
+            <a href="" class="btn btn-success btn-xs">btn-success</a>
+            <a href="" class="btn btn-info btn-xs">btn-info</a>
+            <a href="" class="btn btn-warning btn-md">btn-warning</a>
+            <a href="" class="btn btn-danger btn-lg">btn-danger</a>
+            <button class="btn btn-primary">未讀訊息 <span class="badge">8</span></button>
+
+            <h3>輸入</h3>
+            <!-- 文字輸入群組開始 -->
+            <!-- bs3input-group -->
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">欄位名稱</span>
+                <input type="text" class="form-control" placeholder="內容填寫在這" aria-describedby="basic-addon1">
+            </div>
+            <!-- 文字輸入群組結尾 -->
+            <!-- 文字輸入&按鈕群組開始 -->
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="搜尋...">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button">開始</button>
+              </span>
+            </div>
+            <!-- 文字輸入群組結尾 -->
+            <!-- 文字輸入&按鈕群組結尾 -->
+            <div class="form-group">
+                <label for="accountInput">帳號</label>
+                <input type="text" class="form-control" id="accountInput" placeholder="帳號...">
+            </div>
+
+            <!-- 進度條開始 -->
+            <div class="progress">
+                <!--               progress-bar-success 用來設定成預設的顏色    progress-bar-striped用來設定彩帶的樣式 active讓它動-->
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    <!--                   sr-only不會出現 但會被螢幕閱讀器唸出來    -->
+                    <span class="sr-only">完成80%</span>
+                </div>
+            </div>
+            <!-- 進度條結尾 -->
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1>導覽相關</h1>
+            <!--導覽連結tabs開始-->
+            <!-- bs3nav-tabs -->
+            <h3>書籤式導覽</h3>
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="#">連結 1</a></li>
+                <li role="presentation"><a href="#">連結 2</a></li>
+                <li role="presentation"><a href="#">連結 3</a></li>
+                <li role="presentation" class="active"><a href="#">連結 4</a></li>
+            </ul>
+            <!--導覽連結tabs結束-->
+            <h3>按鈕導覽</h3>
+            <!-- bs3nav-pills -->
+            <!--導覽連結pills開始-->
+            <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="#">連結 1</a></li>
+                <li role="presentation"><a href="#">連結 2</a></li>
+                <li role="presentation"><a href="#">連結 3</a></li>
+            </ul>
+            <!--導覽連結pills結束-->
+            <h3>麵包屑導覽</h3>
+            <!--麵包屑導覽開始-->
+            <ol class="breadcrumb">
+                <li><a href="#">圖書館</a></li>
+                <li><a href="#">物理</a></li>
+                <li class="active">書名</li>
+            </ol>
+            <!--麵包屑導覽結束-->
+
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h1>影像相關元素</h1>
+            <h2>Thumbnail</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="https://unsplash.it/800/800?image=992" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-responsive img-rounded" src="https://unsplash.it/800/800?image=992" alt="">
+                </div>
+                <div class="col-md-4">
+                    <img class="img-responsive img-circle" src="https://unsplash.it/800/800?image=992" alt="">
+                </div>
+            </div>
+            <h2>Carousel 投影輪播</h2>
+
+            <div id="slide1" class="carousel slide" data-ride="carousel" data-interval="2000">
+                <!-- 輪播內容 -->
+                <div class="carousel-inner">
+                    <!-- 每一頁是一個.item -->
+                    <div class="item active">
+                        <h1>第一頁</h1>
+                    </div>
+                    <div class="item">
+                        <h1>第二頁</h1>
+                    </div>
+                    <div class="item">
+                        <h1>第三頁</h1>
+                    </div>
+                    <div class="item">
+                        <h1>第四頁</h1>
+                    </div>
+                </div>
+                <!-- 上一頁 下一頁 -->
+                <div class="control-btn">
+                    <a href="#slide1" class="left carousel-control" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hiddden="true"></span>
+                    </a>
+                    <a href="#slide1" class="right carousel-control" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hiddden="true"></span>
+                    </a>
+                </div>
+                <!-- 指定輪播到第幾頁的按鈕 -->
+                <ol class="carousel-indicators">
+                    <li class="active" data-target="#slide1" data-slide-to="0"></li>
+                    <li data-target="#slide1" data-slide-to="1"></li>
+                    <li data-target="#slide1" data-slide-to="2"></li>
+                    <li data-target="#slide1" data-slide-to="3"></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="page-header">
+                <h1>Bootstrap<small>網格系統</small></h1>
+            </div>
+            <!-- row -->
+            <div class="row">
+                <!-- col -->
+                <div class="col-md-4 col-sm-6 feature">
+                    <h3>第一個col</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ratione laudantium sapiente, eos nostrum illo consectetur fugiat culpa, architecto beatae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime mollitia, vitae, tenetur earum beatae est similique ea vel cum, autem rerum fuga temporibus nesciunt aliquam ducimus incidunt nostrum aperiam hic!</p>
+                </div>
+                <!-- col end -->
+                <!-- col -->
+                <div class="col-md-4 col-sm-6 feature">
+                    <h3>第二個col</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ratione laudantium sapiente, eos nostrum illo consectetur fugiat culpa, architecto beatae.</p>
+                </div>
+                <!-- col end -->
+                <!-- 第三個col在平板的clearfix -->
+                <div class="clearfix visible-sm-block"></div>
+                <!-- col -->
+                <div class="col-md-4 col-sm-6 feature">
+                    <h3>第三個col</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ratione laudantium sapiente, eos nostrum illo consectetur fugiat culpa, architecto beatae.</p>
+                </div>
+                <!-- col end -->
+                <!-- 第四個col在筆電、大螢幕電腦的clearfix -->
+                <div class="clearfix visible-md-block visible-lg-block"></div>
+                <!-- col -->
+                <div class="col-md-4 col-sm-6 feature">
+                    <h3>第四個col</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ratione laudantium sapiente, eos nostrum illo consectetur fugiat culpa, architecto beatae.</p>
+                </div>
+                <!-- col end -->
+                <!-- col -->
+                <div class="col-md-4 col-sm-6 feature">
+                    <h3>第五個col</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ratione laudantium sapiente, eos nostrum illo consectetur fugiat culpa, architecto beatae.</p>
+                </div>
+                <!-- col end -->
+                <!-- col -->
+                <div class="col-md-4 col-sm-6 feature">
+                    <h3>第六個col</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ratione laudantium sapiente, eos nostrum illo consectetur fugiat culpa, architecto beatae.</p>
+                </div>
+                <!-- col end -->
+            </div>
+            <!-- row end -->
+            <h2>Grid offset</h2>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3>Col-md-6</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit laboriosam enim saepe inventore libero cumque unde dolore deleniti ducimus ad, ullam tempore labore, officiis accusantium provident possimus incidunt quae necessitatibus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

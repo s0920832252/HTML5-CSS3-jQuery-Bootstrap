@@ -1,0 +1,47 @@
+/*當因為高度不一致造成跑版的問題的時候,第一個方法是: 強迫設定高度一致*/
+
+
+/*
+.feature {
+    height: 250px;
+}
+*/
+
+header.jumbotron {
+    background-image: url('https://unsplash.it/800/600?image=999');
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+header.jumbotron h1 {
+    color: white;
+    text-align: center;
+}
+
+.carousel .item {
+    width: 100%;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.carousel .item>h1 {
+    color: white;
+    text-align: center;
+}
+
+.item:nth-child(1) {
+    background: #ff3f3f;
+}
+
+.item:nth-child(2) {
+    background: royalblue;
+}
+
+.item:nth-child(3) {
+    background: #35e5af;
+}
+
+.item:nth-child(4) {
+    background: orange;
+}
