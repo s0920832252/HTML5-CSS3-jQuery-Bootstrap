@@ -1,0 +1,21 @@
+@mixin transition($arg) {
+    transition: $arg;
+    -moz-transition: $arg;
+    -webkit-transition: $arg;
+}
+
+@mixin border-radius($arg) {
+    border-radius: $arg;
+    -moz-border-radius: $arg;
+    -webkit-border-radius: $arg;
+}
+
+@mixin box-shadow($arg) {
+    box-shadow: $arg;
+    -moz-box-shadow: $arg;
+    -webkit-box-shadow: $arg;
+}
+
+%normalTransition {
+    @include transition(all .5s ease);
+}
