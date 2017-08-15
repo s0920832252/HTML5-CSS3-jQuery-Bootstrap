@@ -74,7 +74,7 @@ nav {
 }
 
 .asidebar .asideTitle {
-    float: left;
+    /*    float: left;*/
     /*    text-height: 80px;*/
     top: 30%;
     position: absolute;
@@ -82,8 +82,9 @@ nav {
 }
 
 .asidebar .icon {
-    margin-top: 15px;
+    margin-top: 30px;
     float: right;
+    /*    position: absolute;*/
     color: white;
 }
 
@@ -184,11 +185,11 @@ section {
     background-size: cover;*/
 }
 
-.pages>[id^='page'] {
+.pages>[class^='page'] {
     display: none;
 }
 
-.pages>[id^='page'].active {
+.pages>[class^='page'].active {
     display: block;
 }
 
@@ -202,7 +203,7 @@ section {
 }
 
 .pages {
-    transition: all 0.5s ease;
+    transition: all 2s ease;
 }
 
 .CV:hover>.pages {
@@ -219,4 +220,30 @@ section {
 
 .CV:hover>.phony {
     opacity: 0;
+}
+
+H1.title {
+    color: blueviolet;
+    font-size: 25px;
+}
+
+.basicData,
+.contractData,
+.jobData {
+    padding: 5%;
+}
+
+.gender,
+.mandatory,
+.exitMandatoryData,
+.brithDay,
+.marry,
+.height,
+.weight,
+.homePhone,
+.address,
+.jobState,
+.drive {
+    margin-top: 2%;
+    padding-left: 10%;
 }
