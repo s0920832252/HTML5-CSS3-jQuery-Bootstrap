@@ -113,7 +113,7 @@ nav {
     /* background-color: #E2C0B9;
     background-image: url(../img/cork-repeat.jpg);
     */
-    background-color: rgba(0, 0, 0, 0.2);
+    /*    background-color: rgba(0, 0, 0, 0.2);*/
     background-size: cover;
     position: absolute;
     left: 0;
@@ -246,4 +246,5 @@ H1.title {
 .drive {
     margin-top: 2%;
     padding-left: 10%;
+    font-weight: 900;
 }

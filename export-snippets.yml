@@ -1,0 +1,1482 @@
+- trigger: jq-start
+  description: jquery起手式
+  scope: javascript
+  mTime: 1500481383446
+  text: |
+        $(function () {
+            // 主程式寫在這裡面
+        });
+
+- trigger: jq-scroll
+  description: jqeury綁定視窗滾動
+  scope: javascript
+  mTime: 1500481859337
+  text: |
+        $(window).bind('scroll', function () {
+        
+        });
+
+- trigger: jq-click
+  description: jquery按鈕點擊事件
+  scope: javascript
+  mTime: 1500481906456
+  text: |
+        $('#btn').click(function () {
+        
+        });
+
+- trigger: bs3navbar-default-full
+  scope: html
+  description: bs3 導覽列 預設
+  mTime: 1477802215742
+  text: |
+        <!--導覽列開始-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- 導覽列 RWD選單圖示與品牌連結 -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#${1:bs-example-navbar-collapse-1}">
+                        <span class="sr-only">觸發縮放</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">品牌連結 公司名稱 或 logo</a>
+                </div>
+        
+                <!-- 導覽列選項 與導覽列中的表單元素 -->
+                <!-- 小螢幕時要被收起的元素 放置於 navbar-collapse -->
+                <div class="collapse navbar-collapse" id="${1:bs-example-navbar-collapse-1}">
+                    <!-- 導覽列中的導覽清單 -->
+                    <ul class="nav navbar-nav">
+        
+                        <!-- active的選項-->
+                        <li class="active"><a href="#">連結 <span class="sr-only">(目前頁面)</span></a></li>
+                        <li><a href="#">連結</a></li>
+        
+                        <!-- 導覽清單中的dropdown選單 -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">下拉選單 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">選項 1</a></li>
+                                <li><a href="#">選項 2</a></li>
+                                <li><a href="#">選項 3</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">選項 4</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">選項 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+                    <!-- 導覽列中的表單元素 -->
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜尋</button>
+                    </form>
+        
+                    <!-- 拉到右邊的導覽列清單 -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">連結</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">下拉選單 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">選項 1</a></li>
+                                <li><a href="#">選項 2</a></li>
+                                <li><a href="#">選項 3</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">選項 4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!--導覽列結束-->
+
+- scope: html
+  trigger: bs3navbar-brand
+  description: bs3 基本導覽列 含品牌圖示
+  mTime: 1477756134935
+  text: |
+        <!--導覽列開始-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <!--品牌圖示-->
+                        <img alt="Brand" src="${1}">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!--導覽列結束-->
+
+- scope: html
+  trigger: bs3navbar-btn
+  description: bs3 導覽列中的按鈕
+  mTime: 1477755679330
+  text: |
+        <button type="button" class="btn btn-default navbar-btn">導覽列按鈕</button>
+
+- trigger: bs3navbar-fixed-top
+  description: bs3 固定頂部導覽列
+  scope: html
+  mTime: 1477756383585
+  text: |
+        <!--導覽列開始-->
+           <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                ${1}
+            </div>
+        </nav>
+        <!--導覽列結束-->
+
+- scope: html
+  description: bs3 navbar 預設
+  trigger: bs3navbar-default
+  mTime: 1477755996244
+  text: |
+        <!--導覽列開始-->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                ${1:導覽列內容}
+            </div>
+        </nav>
+        <!--導覽列結束-->
+
+- trigger: bs3navbar-fixed-bottom
+  description: bs3 固定底部導覽列
+  scope: html
+  mTime: 1477756372709
+  text: |
+        <!--導覽列開始-->
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                ${1}
+            </div>
+        </nav>
+        <!--導覽列結束-->
+
+- scope: html
+  description: bs3 導覽連結tabs
+  trigger: bs3nav-tabs
+  mTime: 1477756683728
+  text: |
+        <!--導覽連結tabs開始-->
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">連結 1</a></li>
+            <li role="presentation"><a href="#">連結 2</a></li>
+            <li role="presentation"><a href="#">連結 3</a></li>
+        </ul>
+        <!--導覽連結tabs結束-->
+
+- trigger: bs3nav-pills
+  scope: html
+  description: bs3 導覽連結pills
+  mTime: 1477756859971
+  text: |
+        <!--導覽連結pills開始-->
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="#">連結 1</a></li>
+            <li role="presentation"><a href="#">連結 2</a></li>
+            <li role="presentation"><a href="#">連結 3</a></li>
+        </ul>
+        <!--導覽連結pills結束-->
+
+- trigger: bs3nav-pills-stacked
+  description: bs3 導覽連結pills垂直堆疊
+  scope: html
+  mTime: 1477757000463
+  text: |
+        <!--導覽連結pills垂直堆疊開始-->
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="active"><a href="#">連結 1</a></li>
+            <li role="presentation"><a href="#">連結 2</a></li>
+            <li role="presentation"><a href="#">連結 3</a></li>
+        </ul>
+        <!--導覽連結pills垂直堆疊結束-->
+
+- scope: html
+  trigger: bs3navbar-form
+  description: bs3 導覽列表單元素
+  mTime: 1477755569977
+  text: |
+        <!--導覽列表單元素開始-->
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">登入</button>
+        </form>
+        <!--導覽列表單元素結束-->
+
+- trigger: html-bs3
+  scope: html
+  description: bs3 基本模板
+  mTime: 1477766462913
+  text: |
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="renderer" content="webkit">
+            <title>title</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </head>
+        
+        <body>
+            ${1}
+        </body>
+        </html>
+
+- trigger: bs3thumbnail-image
+  description: bs3 圖片縮圖連結 無說明文字版
+  scope: html
+  mTime: 1477761261291
+  text: |
+        <a href="" class="thumbnail">
+            <img src="https://source.unsplash.com/800x600?${1:nature}" alt="">
+        </a>
+
+- trigger: img-nature
+  description: unsplash nature
+  scope: html
+  mTime: 1477761033104
+  text: |
+        <img src="https://source.unsplash.com/800x600?nature" alt="">
+
+- trigger: img-random
+  description: unsplash random
+  scope: html
+  mTime: 1477761096811
+  text: |
+        <img src="https://source.unsplash.com/800x600" alt="">
+
+- trigger: img-people
+  description: unsplash people
+  scope: html
+  mTime: 1477761143085
+  text: |
+        <img src="https://source.unsplash.com/800x600?people" alt="">
+
+- trigger: img-buildings
+  description: unsplash buildings
+  scope: html
+  mTime: 1477761171023
+  text: |
+        <img src="https://source.unsplash.com/800x600?buildings" alt="">
+
+- trigger: img-food
+  description: unsplash food
+  scope: html
+  mTime: 1477761198379
+  text: |
+        <img src="https://source.unsplash.com/800x600?food" alt="">
+
+- trigger: bs3scrollspy
+  description: bs3 滾動監聽
+  scope: html
+  mTime: 1477789475876
+  text: |
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Bootstrap Example</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <style>
+                body {
+                    position: relative;
+                }
+                
+                #section1 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #1E88E5;
+                }
+                
+                #section2 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #673ab7;
+                }
+                
+                #section3 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #ff9800;
+                }
+                
+                #section41 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #00bcd4;
+                }
+                
+                #section42 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #009688;
+                }
+            </style>
+        </head>
+        
+        <!--必要設定：data-target:指向要監聽的導覽列-->
+        
+        <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        
+            <!--導覽列類別名稱要與data-target中一致-->
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">WebSiteName</a>
+                    </div>
+                    <div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <!--超連結連結到下面的段落ＩＤ-->
+                                <li><a href="#section1">Section 1</a></li>
+                                <li><a href="#section2">Section 2</a></li>
+                                <li><a href="#section3">Section 3</a></li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#section41">Section 4-1</a></li>
+                                        <li><a href="#section42">Section 4-2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        
+            <div id="section1" class="container-fluid">
+                <h1>Section 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="section2" class="container-fluid">
+                <h1>Section 2</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="section3" class="container-fluid">
+                <h1>Section 3</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="section41" class="container-fluid">
+                <h1>Section 4 Submenu 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="section42" class="container-fluid">
+                <h1>Section 4 Submenu 2</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+        
+        </body>
+        </html>
+
+- scope: html
+  trigger: css-normalize
+  description: css-normalize
+  mTime: 1484051184576
+  text: |
+        <!-- normalize.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+- trigger: css-reset
+  scope: html
+  description: 重設所有css
+  mTime: 1484051497903
+  text: |
+        <!-- reset.css -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+
+- scope: html
+  trigger: html5-default
+  description: html5-default
+  mTime: 1484918457984
+  text: |
+        <!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="renderer" content="webkit">
+            <meta name="keywords" content="Keyword 1,Keyword 2">
+            <meta name="description" content="description">
+            <link rel="stylesheet" href="https://andy19910102.github.io/css-basic/base.css">
+            <title>title</title>
+        </head>
+        
+        <body>
+        
+        </body>
+        
+        </html>
+
+- scope: html
+  description: BS3導覽列 Data-spy
+  trigger: bs3navbar-scroll-spy
+  mTime: 1490961956555
+  text: |
+        <!-- 導覽列 -->
+            <nav class="navbar navbar-default" data-spy="affix" data-offset-top="300">
+                <div class="container-fluid">
+                    <!-- note 導覽列Header -->
+                    <div class="navbar-header">
+                        <!-- 漢堡按鈕 -->
+                        <button type="button" class="navbar-toggle collapsed" data-target="#indexNavbar" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- 品牌名稱 -->
+                        <a href="#" class="navbar-brand">
+                            BRAND
+                        </a>
+                    </div>
+                    <!-- note 導覽列連結 -->
+                    <div class="collapse navbar-collapse" id="indexNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#layoutSection">排版</a></li>
+                            <li><a href="#tableSection">表格</a></li>
+                            <li><a href="#carouselSection">輪播</a></li>
+                            <li><a href="#tabSection">頁籤</a></li>
+                            <li><a href="#componentSection">元件</a></li>
+                        </ul>
+                    </div>
+                    <!-- 導覽列連結 end -->
+                </div>
+            </nav>
+
+- scope: html
+  trigger: cdn-normalize
+  description: normalize連結
+  mTime: 1500480632558
+  text: |
+        <!-- normalize.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+
+- trigger: img-unsplash
+  description: 使用unsplash.it的圖片
+  scope: html
+  mTime: 1500482036500
+  text: |
+        <img src="https://unsplash.it/300/300?image=1015" alt="">
+
+- trigger: cdn-font-awesome
+  description: fontawesome連結
+  scope: html
+  mTime: 1500480601362
+  text: |
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+- trigger: bs3navbar-default-basic
+  description: bs3導覽列基本配置
+  scope: html
+  mTime: 1500477773037
+  text: |
+        <!--導覽列開始-->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- 導覽列 RWD選單圖示與品牌連結 -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">觸發縮放</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                        <a class="navbar-brand" href="#">品牌連結</a>
+                    </div>
+                    <!-- 小螢幕時要被收起的元素 放置於 navbar-collapse -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <!-- 拉到右邊的導覽列清單 -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">連結</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">下拉選單 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">選項 1</a></li>
+                                    <li><a href="#">選項 2</a></li>
+                                    <li><a href="#">選項 3</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">選項 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <!--導覽列結束-->
+
+- trigger: bs3progress-bar
+  description: bs3進度條
+  scope: html
+  mTime: 1500477865267
+  text: |
+        <!-- 進度條開始 -->
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                <span class="sr-only">完成60%</span>
+            </div>
+        </div>
+        <!-- 進度條結尾 -->
+
+- trigger: bs3progress-bar-active
+  description: bs3動態進度條
+  scope: html
+  mTime: 1500477954151
+  text: |
+        <!-- 動態進度條開始 -->
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                <span class="sr-only">完成60%</span>
+            </div>
+        </div>
+        <!-- 動態進度條結尾 -->
+
+- scope: html
+  trigger: bs3panel
+  description: bs3面板
+  mTime: 1500478044980
+  text: |
+        <!-- 面板開始 -->
+        <div class="panel panel-default">
+            <div class="panel-heading">面板標題</div>
+            <div class="panel-body">
+                面板內容
+            </div>
+        </div>
+        <!-- 面板結尾 -->
+
+- trigger: bs3textarea
+  description: bs3多行文字輸入
+  scope: html
+  mTime: 1500479139069
+  text: |
+        <textarea class="form-control" rows="3"></textarea>
+
+- trigger: bs3table
+  description: bs3表格
+  scope: html
+  mTime: 1500479472346
+  text: |
+        <!-- 表格開始 -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>欄位一</th>
+                        <th>欄位二</th>
+                        <th>欄位三</th>
+                        <th>欄位四</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                    </tr>
+                    <tr>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                    </tr>
+                    <tr>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                        <td>表格資料</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 表格結尾 -->
+
+- trigger: bs3modal
+  description: bs3彈出視窗
+  scope: html
+  mTime: 1500479665623
+  text: |
+        <!-- 彈出視窗觸發按鈕 開始 -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">觸發按鈕
+        </button>
+            <!-- 彈出視窗觸發按鈕 結尾 -->
+        
+            <!-- 彈出視窗 開始 -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">彈出視窗標題</h4>
+                        </div>
+                        <div class="modal-body">
+                            彈出視窗內容
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">關閉彈出視窗</button>
+                            <button type="button" class="btn btn-primary">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 彈出視窗 結尾 -->
+
+- trigger: bs3tooltip
+  description: bs3工具提示
+  scope: html
+  mTime: 1500479889927
+  text: |
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="提示">Hover我看提示</button>
+        <script type="text/javascript">
+            $(function() {
+                // 須將以下內容放入js中啟動
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+
+- trigger: bs3popover
+  description: bs3彈出式面板
+  scope: html
+  mTime: 1500480200082
+  text: |
+        <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="彈出面板標題" data-content="彈出面板內容">點擊我顯示彈出式面板</a>
+            <script type="text/javascript">
+                $(function() {
+                    // 將以下加入主程式內
+                    $('[data-toggle=popover]').popover();
+                });
+            </script>
+
+- trigger: cdn-bootstrap3
+  description: bootstrap3連結
+  scope: html
+  mTime: 1500480569740
+  text: |
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+- trigger: cdn-jquery
+  description: jquery的連結
+  scope: html
+  mTime: 1500480686317
+  text: |
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+- trigger: cdn-wow
+  description: wow.js的連結
+  scope: html
+  mTime: 1500480857374
+  text: |
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+- trigger: cdn-animate
+  description: animate.css的連結
+  scope: html
+  mTime: 1500480923562
+  text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+- trigger: bs3page-header
+  scope: html
+  description: bs3頁面標題
+  mTime: 1500482323667
+  text: |
+        <div class="page-header">
+                <h1>標題<small>副標題</small></h1>
+            </div>
+
+- trigger: bs3pagination
+  description: bs3分頁導覽
+  scope: html
+  mTime: 1500482501161
+  text: |
+        <!-- 分頁導覽開始 -->
+           <nav aria-label="Page navigation">
+               <ul class="pagination">
+                   <li>
+                       <a href="#" aria-label="Previous">
+                           <span aria-hidden="true">&laquo;</span>
+                       </a>
+                   </li>
+                   <li><a href="#">1</a></li>
+                   <li><a href="#">2</a></li>
+                   <li><a href="#">3</a></li>
+                   <li><a href="#">4</a></li>
+                   <li><a href="#">5</a></li>
+                   <li>
+                       <a href="#" aria-label="Next">
+                           <span aria-hidden="true">&raquo;</span>
+                       </a>
+                   </li>
+               </ul>
+           </nav>
+           <!-- 分頁導覽結束 -->
+
+- trigger: bs3clearfix
+  description: bs3修正高度不同的網格跑版
+  scope: html
+  mTime: 1500481735022
+  text: |
+        <div class="clearfix visible-md-block"></div>
+
+- trigger: bs3grid4x3
+  description: 網格 col-md-4x3
+  scope: html
+  mTime: 1500481621591
+  text: |
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+
+- trigger: cdn-google-map-development
+  description: google map本機測試用連結
+  scope: html
+  mTime: 1500480790280
+  text: |
+        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+
+- trigger: bs3collapse
+  description: bs3點擊顯示內容
+  scope: html
+  mTime: 1500480492872
+  text: |
+        <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseArticle1" aria-expanded="true" aria-controls="collapseArticle1">點我看文章</button>
+        <article class="collapse" id="collapseArticle1">
+            <h2>文章標題</h2>
+            <p>文章內容</p>
+        </article>
+
+- trigger: bs3img-circle
+  description: bs3圓形圖檔顯示
+  scope: html
+  mTime: 1500479284974
+  text: |
+        <img src="https://unsplash.it/200/200?image=700" alt="" class="img-circle">
+
+- trigger: bs3form-group
+  description: bs3基本文字輸入群組
+  scope: html
+  mTime: 1500479096380
+  text: |
+        <div class="form-group">
+            <label for="accountInput">帳號</label>
+            <input type="text" class="form-control" id="accountInput" placeholder="帳號...">
+        </div>
+
+- trigger: bs3btn-default
+  description: bs3基本按鈕
+  scope: html
+  mTime: 1500478925557
+  text: |
+        <button type="button" class="btn btn-default">
+           Default Button
+        </button>
+
+- trigger: bs3glyphicon-search
+  description: bs3圖示search
+  scope: html
+  mTime: 1500478823429
+  text: |
+        <span class="glyphicon glyphicon-search"></span>
+
+- trigger: bs3glyphicon-heart
+  description: bs3圖示heart
+  scope: html
+  mTime: 1500478743306
+  text: |
+        <span class="glyphicon glyphicon-heart"></span>
+
+- trigger: bs3glyphicon-cog
+  description: bs3圖示cog
+  scope: html
+  mTime: 1500478711810
+  text: |
+        <span class="glyphicon glyphicon-cog"></span>
+
+- trigger: bs3glyphicon-chevron-right
+  description: bs3圖示chevron-right
+  scope: html
+  mTime: 1500478623434
+  text: |
+        <span class="glyphicon glyphicon-chevron-right"></span>
+
+- trigger: bs3glyphicon-chevron-left
+  description: bs3圖示chevron-left
+  scope: html
+  mTime: 1500478578372
+  text: |
+        <span class="glyphicon glyphicon-chevron-left"></span>
+
+- trigger: bs3glyphicon-remove
+  description: bs3圖示remove
+  scope: html
+  mTime: 1500478588227
+  text: |
+        <span class="glyphicon glyphicon-remove"></span>
+
+- trigger: bs3glyphicon-ok
+  description: bs3圖示ok
+  scope: html
+  mTime: 1500478478375
+  text: |
+        <span class="glyphicon glyphicon-ok"></span>
+
+- trigger: bs3alert-danger
+  description: bs3 danger通知
+  scope: html
+  mTime: 1500478389248
+  text: |
+        <!-- 通知開始 -->
+        <div class="alert alert-danger" role="alert">通知內容</div>
+        <!-- 通知結尾 -->
+
+- trigger: bs3alert-success
+  description: bs3 success通知
+  scope: html
+  mTime: 1500478333884
+  text: |
+        <!-- 通知開始 -->
+        <div class="alert alert-success" role="alert">通知內容</div>
+        <!-- 通知結尾 -->
+
+- trigger: bs3layout
+  description: bs3基本排版元素Container與Row
+  scope: html
+  mTime: 1500477579651
+  text: |
+        <!-- container 開始 -->
+        <div class="container">
+            <!-- row 開始 -->
+            <div class="row">
+        
+            </div>
+            <!-- row 結尾 -->
+        </div>
+        <!-- container 結尾 -->
+
+- trigger: bs3input-group-btn
+  description: "bs3文字輸入&按鈕群組"
+  scope: html
+  mTime: 1500477423306
+  text: |
+        <!-- 文字輸入&按鈕群組開始 -->
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="搜尋...">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button">開始</button>
+          </span>
+        </div>
+        <!-- 文字輸入&按鈕群組結尾 -->
+
+- trigger: bs3input-group
+  scope: html
+  description: BS3 文字輸入群組
+  mTime: 1500477213361
+  text: |
+        <!-- 文字輸入群組開始 -->
+         <div class="input-group">
+             <span class="input-group-addon" id="basic-addon1">欄位名稱</span>
+             <input type="text" class="form-control" placeholder="內容填寫在這" aria-describedby="basic-addon1">
+         </div>
+         <!-- 文字輸入群組結尾 -->
+
+- scope: html
+  trigger: bs3btn-badge
+  description: BS3按鈕BADGE
+  mTime: 1486446656943
+  text: |
+        <button class="btn btn-primary" type="button">
+          Messages <span class="badge">12</span>
+        </button>
+
+- trigger: bs3affix
+  description: bs3 affix
+  scope: html
+  mTime: 1477789247060
+  text: |
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Bootstrap Example</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <style>
+                body {
+                    position: relative;
+                }
+                
+                .affix {
+                    top: 0;
+                    width: 100%;
+                    z-index: 9999 !important;
+                }
+                
+                .navbar {
+                    margin-bottom: 0px;
+                }
+                
+                .affix ~ .container-fluid {
+                    position: relative;
+                    top: 50px;
+                }
+                
+                #section1 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #1E88E5;
+                }
+                
+                #section2 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #673ab7;
+                }
+                
+                #section3 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #ff9800;
+                }
+                
+                #section41 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #00bcd4;
+                }
+                
+                #section42 {
+                    padding-top: 50px;
+                    height: 500px;
+                    color: #fff;
+                    background-color: #009688;
+                }
+            </style>
+        </head>
+        
+        <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        
+            <div class="container-fluid" style="background-color:#F44336;color:#fff;height:200px;">
+                <h1>Scrollspy & Affix Example</h1>
+                <h3>Fixed navbar on scroll</h3>
+                <p>Scroll this page to see how the navbar behaves with data-spy="affix" and data-spy="scrollspy".</p>
+                <p>The navbar is attached to the top of the page after you have scrolled a specified amount of pixels, and the links in the navbar are automatically updated based on scroll position.</p>
+            </div>
+        
+            <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">WebSiteName</a>
+                    </div>
+                    <div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#section1">Section 1</a></li>
+                                <li><a href="#section2">Section 2</a></li>
+                                <li><a href="#section3">Section 3</a></li>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#section41">Section 4-1</a></li>
+                                        <li><a href="#section42">Section 4-2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        
+            <div id="section1" class="container-fluid">
+                <h1>Section 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="section2" class="container-fluid">
+                <h1>Section 2</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="section3" class="container-fluid">
+                <h1>Section 3</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="section41" class="container-fluid">
+                <h1>Section 4 Submenu 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="section42" class="container-fluid">
+                <h1>Section 4 Submenu 2</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+        
+        </body>
+        </html>
+
+- trigger: bs3carousel
+  description: bs3 圖片輪播
+  scope: html
+  mTime: 1477761815386
+  text: |
+        <!--輪播開始-->
+        <div id="slideshow" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <!--輪播圖片或內容-->
+                <div class="item active"></div>
+                <div class="item"></div>
+            </div>
+            <!--上一頁 下一頁 按鈕-->
+            <div class="control-btn">
+                <a href="#slideshow" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a href="#slideshow" class="right carousel-control" data-slide="next"><span class="glyphicon glyphicon-chevron-right" ></span></a>
+            </div>
+            <!--小圓點換頁-->
+            <ol class="carousel-indicators">
+                <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                <li data-target="#slideshow" data-slide-to="1"></li>
+            </ol>
+        </div>
+        <!--輪播結尾-->
+
+- scope: html
+  trigger: bs3nav-breadcrumbs
+  description: bs3 麵包屑導覽 breadcrumbs
+  mTime: 1477756038311
+  text: |
+        <!--麵包屑導覽開始-->
+        <ol class="breadcrumb">
+            <li><a href="#">連結 1</a></li>
+            <li><a href="#">連結 2</a></li>
+            <li class="active">連結 3 active狀態</li>
+        </ol>
+        <!--麵包屑導覽結束-->
+
+- scope: html
+  trigger: bs3form-basic
+  description: bs3 基本表單
+  mTime: 1477754974340
+  text: |
+        <!--表單開始-->
+        <form>
+            <!--欄位標籤與輸入方塊組開始-->
+            <div class="form-group">
+                <label for="exampleInputEmail1">電子郵件</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <!--欄位標籤與輸入方塊組結尾-->
+            <div class="form-group">
+                <label for="exampleInputPassword1">密碼</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">檔案上傳</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">區塊等級的說明文字，請放在此</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 請勾選
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <!--表單結尾-->
+
+- scope: html
+  trigger: bs3jumbotron-full
+  description: bs3 全版面大型看板
+  mTime: 1477759255461
+  text: |
+        <!--全版面大型看板開始-->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>${1:大型看板標題}</h1>
+                <p>${2:文字說明內容}</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            </div>
+        </div>
+        <!--全版面大型看板結尾-->
+
+- trigger: bs3jumbotron
+  description: bs3 固定寬度大型看板
+  scope: html
+  mTime: 1477759238226
+  text: |
+        <!--固定寬度大型看板開始-->
+        <div class="container">
+            <div class="jumbotron">
+                <h1>${1:大型看板標題}</h1>
+                <p>${2:文字說明內容}</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            </div>
+        </div>
+        <!--固定寬度大型看板結尾-->
+
+- trigger: bs3embed-4x3
+  description: "bs3 iframe 4:3"
+  scope: html
+  mTime: 1477756078685
+  text: |
+        <!-- 4:3 iframe 開始-->
+        <div class="embed-responsive embed-responsive-4by3">
+          <iframe class="embed-responsive-item" src="${1}"></iframe>
+        </div>
+        <!-- 4:3 iframe 結束-->
+
+- trigger: bs3embed-16x9
+  description: "bs3 16:9 iframe"
+  scope: html
+  mTime: 1477802099734
+  text: |
+        <!-- 16:9 iframe 開始-->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="${1:youtube}"></iframe>
+        </div>
+        <!-- 16:9 iframe 結束-->
+
+- trigger: bs3btn-group
+  description: bs3 按鈕群組 btn-group
+  scope: html
+  mTime: 1477754916789
+  text: |
+        <!--按鈕群組開始-->
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default">按鈕 1</button>
+          <button type="button" class="btn btn-default">按鈕 2</button>
+          <button type="button" class="btn btn-default">按鈕 3</button>
+        </div>
+        <!--按鈕群組結尾-->
+
+- trigger: bs3dropdown
+  description: bs3 下拉式選單
+  scope: html
+  mTime: 1477754949163
+  text: |
+        <!--下拉選單開始-->
+        <div class="dropdown">
+            <!--選單按鈕-->
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                按鈕文字
+                <!--按鈕旁邊小圖示-->
+                <span class="caret"></span>
+            </button>
+            <!--選單主體-->
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">選項 1</a></li>
+                <li><a href="#">選項 2</a></li>
+                <li><a href="#">選項 3</a></li>
+                <!--分隔線-->
+                <li role="separator" class="divider"></li>
+                <li><a href="#">其他選項</a></li>
+            </ul>
+        </div>
+        <!--下拉選單結尾-->
+
+- trigger: bs3grid3x4
+  scope: html
+  description: 網格 col-md-3x4
+  mTime: 1500478183627
+  text: |
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+        </div>
+
+- trigger: bs3carousel-example
+  description: bs3多頁輪播範例
+  scope: html
+  mTime: 1500485018257
+  text: |
+        <!--輪播開始-->
+            <div id="slideshow" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <!--輪播圖片或內容-->
+                    <div class="item active">
+                        <div class="carousel-caption">
+                            <h3>第一頁</h3>
+                            <p>第一頁說明文字</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>第二頁</h3>
+                            <p>第二頁說明文字</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>第三頁</h3>
+                            <p>第三頁說明文字</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>第四頁</h3>
+                            <p>第四頁說明文字</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>第五頁</h3>
+                            <p>第五頁說明文字</p>
+                        </div>
+                    </div>
+                </div>
+                <!--上一頁 下一頁 按鈕-->
+                <div class="control-btn">
+                    <a href="#slideshow" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a href="#slideshow" class="right carousel-control" data-slide="next"><span class="glyphicon glyphicon-chevron-right" ></span></a>
+                </div>
+                <!--小圓點換頁-->
+                <ol class="carousel-indicators">
+                    <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                    <li data-target="#slideshow" data-slide-to="1"></li>
+                    <li data-target="#slideshow" data-slide-to="2"></li>
+                    <li data-target="#slideshow" data-slide-to="3"></li>
+                    <li data-target="#slideshow" data-slide-to="4"></li>
+                </ol>
+            </div>
+            <!--輪播結尾-->
+            <!-- 輪播範例CSS -->
+            <style>
+                .carousel .item {
+                    width: 100%;
+                    height: 400px;
+                }
+                
+                .item:nth-child(1) {
+                    background: #377435;
+                }
+                
+                .item:nth-child(2) {
+                    background: #2b5772;
+                }
+                
+                .item:nth-child(3) {
+                    background: #c9661e;
+                }
+                
+                .item:nth-child(4) {
+                    background: #d33a3a;
+                }
+                
+                .item:nth-child(5) {
+                    background: #208790;
+                }
+            </style>
+            <!-- 輪播範例CSS結尾 -->
+
+- trigger: bs3carousel-fade-example
+  description: bs3淡入輪播範例
+  scope: html
+  mTime: 1500485261855
+  text: |
+        <!--輪播開始-->
+            <div id="slideshow" class="carousel carousel-fade slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <!--輪播圖片或內容-->
+                    <div class="item active">
+                        <div class="carousel-caption">
+                            <h3>第一頁</h3>
+                            <p>第一頁說明文字</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>第二頁</h3>
+                            <p>第二頁說明文字</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>第三頁</h3>
+                            <p>第三頁說明文字</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>第四頁</h3>
+                            <p>第四頁說明文字</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>第五頁</h3>
+                            <p>第五頁說明文字</p>
+                        </div>
+                    </div>
+                </div>
+                <!--上一頁 下一頁 按鈕-->
+                <div class="control-btn">
+                    <a href="#slideshow" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a href="#slideshow" class="right carousel-control" data-slide="next"><span class="glyphicon glyphicon-chevron-right" ></span></a>
+                </div>
+                <!--小圓點換頁-->
+                <ol class="carousel-indicators">
+                    <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                    <li data-target="#slideshow" data-slide-to="1"></li>
+                    <li data-target="#slideshow" data-slide-to="2"></li>
+                    <li data-target="#slideshow" data-slide-to="3"></li>
+                    <li data-target="#slideshow" data-slide-to="4"></li>
+                </ol>
+            </div>
+            <!--輪播結尾-->
+            <!-- 輪播範例CSS -->
+            <style>
+                .carousel-fade .carousel-inner .item {
+                    -webkit-transition-property: opacity;
+                    transition-property: opacity;
+                }
+                
+                .carousel-fade .carousel-inner .item,
+                .carousel-fade .carousel-inner .active.left,
+                .carousel-fade .carousel-inner .active.right {
+                    opacity: 0;
+                }
+                
+                .carousel-fade .carousel-inner .active,
+                .carousel-fade .carousel-inner .next.left,
+                .carousel-fade .carousel-inner .prev.right {
+                    opacity: 1;
+                }
+                
+                .carousel-fade .carousel-inner .next,
+                .carousel-fade .carousel-inner .prev,
+                .carousel-fade .carousel-inner .active.left,
+                .carousel-fade .carousel-inner .active.right {
+                    left: 0;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+                }
+                
+                .carousel .item {
+                    width: 100%;
+                    height: 400px;
+                }
+                
+                .item:nth-child(1) {
+                    background: #377435;
+                }
+                
+                .item:nth-child(2) {
+                    background: #2b5772;
+                }
+                
+                .item:nth-child(3) {
+                    background: #c9661e;
+                }
+                
+                .item:nth-child(4) {
+                    background: #d33a3a;
+                }
+                
+                .item:nth-child(5) {
+                    background: #208790;
+                }
+            </style>
+            <!-- 輪播範例CSS結尾 -->
+
+- trigger: mixin-basic
+  description: 建立CSS3基礎混合器
+  scope: scss
+  mTime: 1500481268080
+  text: |
+        // 建立box-sizing 混合器
+        @mixin box-sizing($arg) {
+            box-sizing: $arg;
+            -moz-box-sizing: $arg;
+            -webkit-box-sizing: $arg;
+        }
+        
+        // 建立transition 混合器
+        @mixin transition($arg) {
+            transition: $arg;
+            -moz-transition: $arg;
+            -webkit-transition: $arg;
+        }
+        
+        //建立box-shadow 混合器
+        @mixin box-shadow($arg) {
+            box-shadow: $arg;
+            -moz-box-shadow: $arg;
+            -webkit-box-shadow: $arg;
+        }
+        
+        //建立border-radius 混合器
+        @mixin border-radius($arg) {
+            border-radius: $arg;
+            -moz-border-radius: $arg;
+            -webkit-border-radius: $arg;
+        }
+
+- scope: css
+  trigger: font-face
+  description: 使用font-face設定字型
+  mTime: 1500478148951
+  text: |
+        @font-face {
+            font-family: 'custom-font';
+            src: url('custom-font.eot');
+            /* IE9 兼容模式 */
+            src: /* 指定使用者電腦裡的字體名稱 */
+            url('custom-font.eot#iefix') format('embedded-opentype'), /* IE6 - IE8 */
+            url('custom-font.woff') format('woff'), /* 現代瀏覽器 */
+            url('custom-font.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('custom-font.svg#LindenHill') format('svg');
+            /* iOS */
+            font-weight: 400;
+            font-style: normal;
+        }
+
